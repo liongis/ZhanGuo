@@ -1,0 +1,213 @@
+{
+    "Bot Info" :
+    {
+        "BotName"                   : "ZhanGuo",
+        "Authors"                   : "LionGIS,The.Cash",
+        "PrintInfoOnStart"          : true
+    },
+    
+    "BWAPI" : 
+    {
+        "SetLocalSpeed"             : 0,
+        "SetFrameSkip"              : 0,
+        "UserInput"                 : true,
+        "CompleteMapInformation"    : false
+    },
+    
+    "BaseLocations" :
+    {
+       "LocationsModel"             :false,
+       "Self"                       :[295,261],
+       "Enemy"                      :[3834,3803]
+    },
+    
+    "Micro" :
+    {
+        "KiteWithRangedUnits"       : true,
+        "KiteLongerRangedUnits"     : ["Mutalisk", "Guardian", "Vulture", "Wraith", "Scout"],
+        "WorkersDefendRush"         : true,
+        "RetreatMeleeUnitShields"   : 2,
+        "RetreatMeleeUnitHP"        : { "Zerg" : 8.0, "Protoss" : 18.0, "Terran" : 10 },
+        "CombatSimRadius"			      : 240,
+        "UnitNearEnemyRadius"       : 240,
+		    "ScoutDefenseRadius"		    : { "Terran" : 192 }
+    },
+    
+    "Macro" :
+    {
+        "BOSSFrameLimit"            : 100,
+        "ProductionJamFrameLimit"	  : 1440,
+        "WorkersPerRefinery"        : 3,
+        "WorkersPerPatch"			      : { "Zerg" : 1.0, "Protoss" : 1.0, "Terran" : 1.0 },
+        "AbsoluteMaxWorkers"		    : 65,
+        "BuildingSpacing"           : 2,
+        "BuildingWaiting"           : 4,
+        "PylonSpacing"              : 5,
+        "ExpandToIslands"           : true
+    },
+    
+    "Chat" : 
+    {
+        "ChatFrame"                 : 720,
+        "OpenChat"                  : false,
+        "Content":
+        ["Hi,wo shi SC_AI, xingji rengongzhineng.", "AI QQ Qun: 656186623", "Wo bu kaitu bu jiaqian", "Wo shi AI, qing dian nue."]                   
+    },
+
+    "Debug" :
+    {
+        "ErrorLogFilename"          : "bwapi-data/write/ZhanGuo_ErrorLog.txt",
+        "LogAssertToErrorFile"      : true,
+		
+        "DrawGameInfo"              : true,   
+        "DrawUnitHealthBars"        : false,
+        "DrawProductionInfo"        : true,
+        "DrawBuildOrderSearchInfo"  : false,
+        "DrawScoutInfo"             : false,
+        "DrawEnemyUnitInfo"         : false,
+        "DrawModuleTimers"          : false,
+        "DrawResourceInfo"          : false,
+        "DrawCombatSimInfo"         : false,
+        "DrawCombatSimulationInfo"  : false,
+        "DrawUnitTargetInfo"        : true,
+        "DrawUnitOrders"			      : false,
+        "DrawBWTAInfo"              : false,
+        "DrawMapGrid"               : false,
+        "DrawMapDistances"			    : false,
+        "DrawBaseInfo"				      : false,
+        "DrawStrategyBossInfo"		  : false,
+        "DrawSquadInfo"             : true,
+        "DrawWorkerInfo"            : false,
+        "DrawMouseCursorInfo"       : false,
+        "DrawBuildingInfo"          : false,
+        "DrawReservedBuildingTiles" : false,
+        "DrawBOSSStateInfo"         : false
+    },
+    
+    "Tools" :
+    {
+        "MapGridSize"			: 320
+    },
+    
+    "IO" :
+    {
+        "ReadDirectory"			  : "bwapi-data/read/",
+        "WriteDirectory"		  : "bwapi-data/write/",
+
+    		"ReadOpponentModel"		: false,
+    		"WriteOpponentModel"	: false
+    },
+    
+    "Strategy" :
+    {
+      "ScoutHarassEnemy"          : false,
+  		"AutoGasSteal"				      : false,
+  		"RandomGasStealRate"		    : 0.0,
+  		"SurrenderWhenHopeIsLost"   : true,
+
+		"PvT" :
+			{ "Protoss" : [
+        { "Weight" :0, "Strategy" : "FSGS_Drop", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 0},
+        { "Weight" :0, "Strategy" : "FSGS_2BN", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 0},
+        { "Weight" :0, "Strategy" : "FSGS_LongQi", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 0},
+        { "Weight" :0, "Strategy" : "FSGS_wn_xx", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 0},
+        { "Weight" :0, "Strategy" : "FSGS_ts1gxx", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 0},
+        { "Weight" :0, "Strategy" : "FSGS_HangMu", "maxAttackUnits": 10, "minAttackUnits": 2, "Weight1" : 30}
+			]},
+
+		"PvP" :
+			{ "Protoss" : [
+        { "Weight" :30, "Strategy" : "FSGS_Drop", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 40},
+        { "Weight" :10, "Strategy" : "FSGS_2BN", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 15},
+        { "Weight" :30, "Strategy" : "FSGS_LongQi", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 40},
+        { "Weight" :0, "Strategy" : "FSGS_wn_xx", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 5},
+        { "Weight" :0, "Strategy" : "FSGS_ts1gxx", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 15}
+			]},
+
+		"PvZ" :
+			{ "Protoss" : [
+        { "Weight" :30, "Strategy" : "FSGS_Drop", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 40},
+        { "Weight" :10, "Strategy" : "FSGS_2BN", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 15},
+        { "Weight" :30, "Strategy" : "FSGS_LongQi", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 40},
+        { "Weight" :0, "Strategy" : "FSGS_wn_xx", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 5},
+        { "Weight" :0, "Strategy" : "FSGS_ts1gxx", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 15}
+			]},
+
+		"PvU" :
+			{ "Protoss" : [
+        { "Weight" :30, "Strategy" : "FSGS_Drop", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 40},
+        { "Weight" :10, "Strategy" : "FSGS_2BN", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 15},
+        { "Weight" :30, "Strategy" : "FSGS_LongQi", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 40},
+        { "Weight" :0, "Strategy" : "FSGS_wn_xx", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 5},
+        { "Weight" :0, "Strategy" : "FSGS_ts1gxx", "maxAttackUnits": 60, "minAttackUnits": 2, "Weight2" : 15}
+			]},
+
+		"UseEnemySpecificStrategy" : false,
+    "EnemySpecificStrategy" :
+    {
+
+		},
+
+		"CounterStrategies" :
+		{
+
+		},
+
+		"StrategyCombos" :
+		{
+
+		},
+    
+    "Map": {
+      "FSGS": {
+        "StartLocations":{
+          "L1":[115,13],"L3":[115,60],"L5":[114,110],"L6":[59,111],"L7":[8,110],"L9":[9,60],"L11":[9,13],"L12":[66,13]
+        },
+        "ChokePoint": {
+          "L1":[98,32],"L3":[88,63],"L5":[97,92],"L6":[64,92],"L7":[31,92],"L9":[39,63],"L11":[31,35],"L12":[64,35]
+        },
+        "UnloadPoint": {
+          "L1":[117,4],"L3":[117,51],"L5":[117,121],"L6":[62,122],"L7":[11,121],"L9":[11,51],"L11":[11,4],"L12":[68,4]
+        },
+        "BuildLocation": {
+          "L1" :{"at0":[97,33],"bp1":[112,10],"bp2":[120,10],"bn1":[103,4],"bn2":[103,7],"bg1":[116,12],"bg2":[112,12],"bg3":[108,12],"bp3":[111,2],"bp4":[96,10],"by1":[117,10],"bp5":[118,18],"vc1":[125,8],"bf1":[114,10],"vt1":[125,10],"vr1":[103,10],"bg4":[124,12],"bf2":[125,6],"bf3":[125,4],"vb1":[106,10],"vo1":[109,10],"vr2":[99,8],"vr3":[99,10],"vr4":[99,12],"bg5":[120,12],"bg6":[104,12],"bp6":[120,2],"bg7":[120,16],"bg8":[120,19],"bg9":[124,16],"bg10":[124,19],"bg11":[114,16],"bg12":[110,16],"bg13":[114,19],"bg14":[110,19],"bp7":[107,18],"bp8":[118,25],"bp9":[107,25],"bg15":[103,16],"bg16":[103,19],"bg17":[99,16],"bg18":[99,19],"bg19":[120,23],"bg20":[120,26],"bg21":[124,23],"bg22":[124,26],"bg23":[114,23],"bg24":[114,26],"bg25":[110,23],"bg26":[110,26],"bg27":[103,23],"bg28":[103,26],"bg29":[99,23],"bg30":[99,26],"bp10":[103,2],"bp11":[96,2],"bp12":[96,18],"bp13":[96,25],"bp14":[122,31],"bp15":[112,31],"bp16":[104,32],"vs1":[99,4],"bc1":[114,8],"bc2":[108,7],"bc3":[118,8],"bc4":[116,2],"vs2":[99,1],"bc5":[94,2],"bc6":[94,4],"bc7":[94,8],"bc8":[94,10],"bc9":[94,12],"bc10":[94,16],"bc11":[94,18],"bc12":[94,20],"bc13":[124,31],"bc14":[126,31],"bc15":[120,31],"bc16":[114,31],"bc17":[116,31],"bc18":[110,31],"va1":[125,0],"vf1":[122,0],"bc19":[124,2],"bc20":[120,0],"bc21":[118,0],"bc22":[110,0],"bc23":[112,0],"bc24":[108,0],"bc25":[106,31],"bc26":[102,33],"bc27":[102,31],"bc28":[94,29],"bc29":[94,27],"bc30":[94,25],"bp17":[107,27],"bp18":[118,27],"bp19":[107,20],"bp20":[118,20],"bp21":[94,31],"bp22":[105,2],"bc31":[107,8]},
+          "L3" :{"at0":[89,62],"bn1":[103,51],"bn2":[103,54],"bp1":[112,57],"bg1":[116,59],"bp2":[120,57],"bp3":[111,49],"bp4":[103,57],"by1":[117,57],"bf1":[114,57],"bg2":[112,59],"bg3":[120,59],"bc1":[114,55],"bc2":[108,54],"bc3":[118,55],"bc4":[116,49],"vr1":[100,59],"vs1":[99,54],"vr2":[100,57],"vr3":[96,57],"vr4":[96,59],"vo1":[122,57],"vc1":[125,55],"bf2":[125,53],"bp4":[126,49],"vb1":[109,57],"bf3":[125,51],"vt1":[125,57],"bg4":[124,59],"bg5":[108,59],"bg6":[103,59],"bp5":[118,65],"bp6":[107,65],"bg7":[124,63],"bg8":[124,66],"bg9":[120,63],"bg10":[120,66],"bg11":[114,63],"bg12":[114,66],"bg13":[110,63],"bg14":[110,66],"bg15":[103,63],"bg16":[103,66],"bg17":[99,63],"bg18":[99,66],"bp7":[118,72],"bp8":[107,72],"va1":[125,47],"vf1":[122,47],"bp9":[113,47],"bp10":[104,47],"bp11":[96,51],"vs2":[99,51],"bc5":[118,47],"bc6":[120,47],"bc7":[111,47],"bc8":[108,47],"bc9":[106,47],"bc10":[102,48],"bc11":[100,49],"bc12":[94,52],"bc13":[94,54],"bp12":[92,59],"bg19":[124,70],"bg20":[120,70],"bg21":[120,73],"bg22":[124,73],"bg23":[114,70],"bg24":[114,73],"bg25":[110,70],"bg26":[110,73],"bg27":[103,70],"bg28":[103,73],"bg29":[99,70],"bg30":[99,73],"bp13":[94,74],"bp14":[118,79],"bp15":[107,79],"bp16":[118,63],"bp17":[118,67],"bp18":[118,70],"bp19":[118,74],"bp20":[121,49],"bp21":[107,67],"bp22":[92,67],"bc14":[123,82],"bc15":[121,82],"bc16":[119,82],"bc17":[111,82],"bc18":[113,82],"bc19":[108,81],"bc20":[104,79],"bc21":[100,77],"bc22":[96,75],"bc23":[94,72],"bc24":[94,70],"bc25":[94,68],"bc26":[94,66],"bc27":[114,79],"bc28":[116,79],"bc29":[120,79],"bc30":[122,79]},
+          "L5" :{"at0":[97,91],"bp1":[111,114],"bn1":[103,116],"bn2":[103,119],"bp2":[119,114],"bg1":[116,111],"bg2":[112,111],"by1":[116,114],"bf1":[113,114],"bg3":[120,111],"bg4":[108,111],"bp3":[120,122],"bp4":[118,106],"bp5":[110,122],"bp6":[97,117],"bg5":[120,104],"bg6":[120,107],"bg7":[124,104],"bg8":[124,107],"bg9":[114,107],"bg10":[114,104],"bg11":[110,104],"bg12":[110,107],"vr1":[103,114],"vc1":[125,116],"bf2":[125,118],"bf3":[125,120],"vs1":[99,116],"vs2":[99,119],"vb1":[108,114],"vo1":[121,114],"bc1":[114,116],"bc2":[108,117],"bc3":[118,116],"bc4":[116,122],"bc5":[108,122],"vt1":[125,114],"bp7":[118,99],"va1":[125,122],"vf1":[122,122],"bg13":[120,100],"bg14":[120,97],"bg15":[124,97],"bg16":[124,100],"bg17":[114,97],"bg18":[114,100],"bg19":[110,97],"bg20":[110,100],"bg21":[103,111],"bp8":[97,110],"vr2":[100,114],"bg22":[99,111],"bg23":[99,108],"bg24":[103,108],"bp9":[99,103],"vr3":[98,105],"vr4":[98,101],"bp10":[99,99],"bg25":[101,104],"bg26":[101,101],"bg27":[105,104],"bg28":[105,101],"bg29":[101,98],"bg30":[105,98],"bp11":[98,123],"bc6":[125,112],"bp12":[116,125],"bp13":[120,94],"bp14":[111,94],"bp15":[97,108],"bp16":[97,112],"bp17":[118,101],"bp18":[118,108],"bp19":[118,97],"bp20":[118,104],"bc7":[122,94],"bc8":[124,94],"bc9":[126,94],"bc10":[113,94],"bc11":[115,94],"bc12":[109,94],"bc13":[94,125],"bc14":[94,123],"bc15":[94,121],"bc16":[96,125],"bc17":[94,117],"bc18":[94,113],"bc19":[94,111],"bc20":[94,109],"bc21":[94,103],"bc22":[94,101],"bp21":[104,92],"bp22":[94,95],"bc23":[102,91],"bc24":[102,93],"bc25":[96,95],"bc26":[94,97],"bc27":[96,97],"bc28":[118,125],"bc29":[114,125],"bc30":[108,125]},
+          "L6" :{"at0":[63,91],"bp1":[64,115],"bn1":[72,117],"bn2":[72,120],"bg1":[57,112],"bg2":[61,112],"bp2":[56,115],"by1":[58,115],"by2":[56,113],"bf1":[61,115],"vc1":[50,115],"vr1":[54,113],"vr2":[50,113],"vt1":[50,117],"bp3":[55,123],"bg3":[65,112],"vo1":[66,115],"vb1":[53,115],"bf2":[50,120],"bf3":[50,122],"bp4":[78,113],"bg4":[74,112],"bg5":[70,112],"bp5":[59,107],"bp6":[48,107],"bp7":[78,107],"bg6":[61,108],"bg7":[61,105],"bg8":[65,105],"bg9":[65,108],"bg10":[50,108],"bg11":[54,108],"bg12":[54,105],"bg13":[50,105],"bg14":[74,108],"bg15":[70,108],"bg16":[74,105],"bg17":[70,105],"bp8":[48,120],"bp9":[67,125],"bp10":[48,100],"bp11":[78,100],"bp12":[59,100],"bp13":[78,123],"bg18":[74,101],"bg19":[74,98],"bg20":[70,101],"bg21":[70,98],"bg22":[61,101],"bg23":[65,101],"bg24":[61,98],"bg25":[65,98],"bg26":[50,101],"bg27":[50,98],"bg28":[54,98],"bg29":[54,101],"bc1":[63,117],"vs1":[76,117],"vs2":[76,120],"bc2":[69,118],"bc3":[59,117],"bc4":[61,123],"bc5":[65,123],"bc6":[55,125],"bc7":[57,123],"bc8":[48,122],"bc9":[48,124],"bc10":[50,124],"bc11":[78,125],"bc12":[76,123],"bc13":[76,125],"bc14":[78,115],"bc15":[76,115],"vr3":[61,96],"vr4":[55,96],"bp14":[70,93],"bp15":[56,93],"bp16":[59,98],"bp17":[59,102],"bp18":[59,105],"bp19":[59,109],"vf1":[72,125],"va1":[69,125],"bg30":[65,95],"bp20":[48,105],"bp21":[78,105],"bp22":[48,113],"bc16":[78,102],"bc17":[78,98],"bc18":[48,117],"bc19":[48,115],"bc20":[48,109],"bc21":[48,102],"bc22":[48,98],"bc23":[74,95],"bc24":[72,94],"bc25":[50,96],"bc26":[52,95],"bc27":[57,125],"bc28":[65,125],"bc29":[63,125],"bc30":[53,125],"bc31":[53,123],"bc32":[69,123],"bc33":[71,123],"bc34":[73,123],"bc35":[78,109],"bc36":[61,125],"bc37":[76,96],"bc38":[68,92],"bc39":[58,92],"bc40":[54,94]},
+          "L7" :{"at0":[30,91],"bp1":[13,114],"bn1":[21,116],"bn2":[21,119],"bg1":[11,111],"bp2":[5,114],"by1":[7,114],"bg2":[7,111],"bg3":[3,111],"vc1":[0,115],"vt1":[0,117],"bf1":[10,114],"vr1":[15,112],"vb1":[15,114],"bp3":[4,122],"vo1":[0,119],"bf2":[0,121],"bf3":[0,123],"bp4":[19,114],"bg4":[21,113],"bg5":[25,113],"bp5":[30,116],"bc1":[12,116],"bc2":[18,117],"bc3":[8,116],"bp6":[18,125],"bc4":[10,122],"bc5":[16,122],"bc6":[14,122],"bp7":[26,106],"bp8":[8,106],"bg6":[22,104],"bg7":[22,107],"bg8":[18,104],"bg9":[18,107],"vs1":[25,116],"vs2":[25,119],"bp9":[8,99],"bg10":[0,104],"bg11":[4,104],"bg12":[0,107],"bg13":[4,107],"bg14":[10,104],"bg15":[14,104],"bg16":[10,107],"bg17":[14,107],"bp10":[26,99],"bg18":[4,100],"bg19":[4,97],"bg20":[0,97],"bg21":[0,100],"bg22":[10,97],"bg23":[10,100],"bg24":[14,97],"bg25":[14,100],"bg26":[18,97],"bg27":[18,100],"bg28":[22,97],"bg29":[22,100],"bp11":[0,111],"vr2":[26,108],"vr3":[26,110],"vr4":[26,104],"bp12":[30,122],"bp13":[10,125],"bg30":[30,113],"bc7":[32,116],"bp14":[32,107],"bc8":[32,122],"bc9":[32,124],"bc10":[30,124],"bc11":[3,114],"bp15":[4,94],"bp16":[14,94],"bp17":[22,92],"vf1":[20,125],"va1":[23,125],"bc12":[32,109],"bc13":[32,105],"bc14":[32,103],"bc15":[2,94],"bc16":[6,94],"bc17":[12,94],"bc18":[16,94],"bc19":[18,94],"bc20":[32,118],"bc21":[32,100],"bc22":[20,125],"bc23":[20,123],"bc24":[22,123],"bc25":[8,125],"bc26":[6,125],"bc27":[12,125],"bc28":[14,125],"bc29":[8,122],"bc30":[22,125],"bp18":[8,104],"bp19":[8,108],"bp20":[8,101],"bp21":[8,97],"bp22":[32,96]},
+          "L9" :{"at0":[38,62],"bp1":[14,57],"bp2":[6,57],"bn1":[21,51],"bn2":[21,54],"bg1":[11,59],"bg2":[7,59],"bg3":[3,59],"bg4":[15,59],"bg5":[19,59],"by1":[11,57],"bf1":[8,57],"bp3":[4,49],"bp4":[16,49],"bp5":[25,55],"bp6":[8,65],"bg6":[4,63],"bg7":[4,66],"bg8":[0,63],"bg9":[0,66],"bg10":[10,63],"bg11":[10,66],"bg12":[14,63],"bg13":[14,66],"bc1":[12,55],"bc2":[18,54],"bc3":[8,55],"vr1":[16,57],"vc1":[0,55],"bp7":[8,72],"bp8":[27,65],"bf2":[0,53],"bf3":[0,51],"bg14":[4,70],"bg15":[4,73],"bg16":[0,70],"bg17":[10,70],"bg18":[0,73],"vr2":[24,57],"vr3":[24,59],"vr4":[27,57],"bg19":[10,73],"bg20":[14,70],"bg21":[14,73],"bp9":[27,72],"bg22":[19,63],"bg23":[23,63],"bg24":[19,66],"bg25":[23,66],"bp10":[8,79],"bg26":[23,70],"bg27":[23,73],"bg28":[19,70],"bg29":[19,73],"vt1":[0,57],"vb1":[3,57],"vo1":[0,59],"bp11":[0,61],"vs1":[4,77],"vs2":[0,77],"bg30":[10,77],"bg31":[14,77],"bp12":[27,63],"bp13":[27,67],"bp14":[8,63],"bp15":[8,67],"bp16":[8,74],"bp17":[8,70],"bp18":[26,49],"bp19":[32,54],"bp20":[34,61],"bp21":[32,74],"bp22":[26,77],"bp23":[20,80],"bp24":[0,80],"vf1":[4,80],"bc2":[10,49],"bc5":[0,47],"bc6":[2,47],"bc7":[4,47],"bc8":[12,47],"bc9":[8,47],"bc10":[22,47],"bc11":[20,47],"bc12":[18,47],"bc13":[28,50],"bc14":[30,51],"bc15":[24,48],"bc16":[32,52],"bc17":[32,56],"bc18":[32,58],"bc19":[32,68],"bc20":[32,70],"bc21":[32,72],"bc22":[30,75],"bc23":[28,76],"bc24":[24,78],"bc25":[22,79],"bc26":[18,81],"bc27":[16,82],"bc28":[14,82],"bc29":[12,82],"bc30":[10,82],"bc31":[0,82],"bc32":[2,80],"bc33":[2,82],"bc34":[4,82],"bc35":[6,82],"bc36":[8,82],"bc37":[6,47],"bc38":[14,47],"bc39":[16,47]},
+          "L11" :{"at0":[30,34],"bp1":[14,10],"bp2":[6,10],"bn1":[21,4],"bn2":[21,7],"bg1":[12,12],"bg2":[8,12],"bg3":[16,12],"bp3":[4,2],"by1":[11,10],"bf1":[8,10],"bp4":[8,18],"bp5":[21,10],"bp6":[14,0],"vr1":[16,10],"bg4":[4,12],"vc1":[0,8],"bg5":[0,12],"bg6":[21,12],"bg7":[0,16],"bg8":[4,16],"bg9":[0,19],"bg10":[4,19],"bg11":[10,16],"bg12":[10,19],"bg13":[14,16],"bg14":[14,19],"bp7":[8,25],"bp8":[27,18],"vs1":[25,7],"vr2":[23,10],"vr3":[26,10],"vr4":[26,12],"bp9":[25,2],"vt1":[0,10],"bc1":[12,8],"bc2":[18,6],"bc3":[8,8],"bf2":[0,6],"bf3":[0,4],"bg15":[19,16],"bg16":[19,19],"bg17":[23,16],"bg18":[23,19],"bg19":[4,23],"bg20":[4,26],"bg21":[0,23],"bg22":[0,26],"bg23":[10,26],"bg24":[10,23],"bg25":[14,23],"bg26":[14,26],"bp10":[27,25],"vf1":[0,0],"va1":[0,2],"vo1":[3,10],"vb1":[3,0],"bg27":[19,23],"bg28":[23,23],"bg29":[19,26],"bg30":[23,26],"vs2":[25,4],"bp11":[32,4],"bp12":[32,12],"bc4":[10,2],"bc5":[32,2],"bc6":[23,2],"bc7":[27,2],"bp13":[8,31],"bp14":[22,32],"bp15":[32,22],"bp16":[8,20],"bp17":[27,20],"bp18":[27,27],"bp19":[8,27],"bc8":[12,0],"bc9":[10,0],"bc10":[16,0],"bc11":[6,0],"bp20":[0,31],"bc12":[6,31],"bc13":[4,31],"bc14":[2,31],"bc15":[0,29],"bc16":[12,31],"bc17":[14,31],"bc18":[16,31],"bc19":[20,31],"bc20":[32,24],"bc21":[32,26],"bc22":[32,20],"bc23":[32,18],"bc24":[32,14],"bc25":[32,10],"bc26":[32,8],"bc27":[32,0],"bc28":[25,0],"bc29":[23,0],"bc30":[27,0],"bp21":[8,16],"bp22":[8,23]},
+          "L12" :{"at0":[63,35],"bp1":[63,10],"bn1":[54,4],"bn2":[54,7],"bp2":[71,10],"bg1":[67,12],"bg2":[63,12],"bg3":[71,12],"by1":[68,10],"bf1":[65,10],"bp3":[62,2],"vr1":[55,10],"vc1":[75,6],"bp4":[50,10],"vt1":[75,8],"bf2":[75,4],"bf3":[75,2],"bp5":[78,4],"bp6":[72,2],"vs1":[50,7],"vo1":[52,10],"vb1":[60,10],"bg4":[75,12],"bg5":[59,12],"bc1":[65,8],"bc2":[59,7],"bc3":[69,8],"bp7":[58,18],"bp8":[77,18],"bg6":[60,16],"bg7":[60,19],"bg8":[64,16],"bg9":[64,19],"bg10":[54,16],"bg11":[54,19],"bg12":[50,16],"bg13":[50,19],"vr2":[54,12],"vr3":[51,12],"vr4":[48,12],"bg14":[69,16],"bg15":[69,19],"bg16":[73,16],"bg17":[73,19],"bp9":[70,25],"bp10":[59,25],"bp11":[48,25],"bg18":[72,23],"bg19":[72,26],"bg20":[76,23],"bg21":[76,26],"bg22":[61,23],"bg23":[61,26],"bg24":[65,23],"bg25":[65,26],"bg26":[50,23],"bg27":[54,23],"bg28":[50,26],"bg29":[54,26],"bg30":[61,29],"bp12":[48,2],"bp13":[56,2],"vs2":[50,4],"vf1":[53,2],"va1":[50,2],"bp14":[73,10],"bp15":[48,17],"bp16":[58,20],"bp17":[59,23],"bp18":[70,23],"bp19":[68,32],"bp20":[56,31],"bc4":[67,2],"bc5":[78,2],"bc6":[76,0],"bc7":[74,0],"bc8":[48,0],"bc9":[50,0],"bc10":[52,0],"bc11":[67,0],"bc12":[65,0],"bc13":[63,0],"bc14":[75,10],"bc15":[77,16],"bc16":[77,20],"bc17":[70,27],"bc18":[59,27],"bp21":[48,10],"bp22":[48,19],"bc19":[48,23],"bc20":[48,27],"bc21":[48,4],"bc22":[48,6],"bc23":[48,8],"bc24":[48,21],"bc25":[78,6],"bc26":[78,8],"bc27":[54,0],"bc28":[56,0],"bc29":[58,0],"bc30":[76,0],"bc31":[78,0]}
+        }  
+      }
+    },
+
+		"Strategies" :
+		{
+      "FSGS_HangMu"			: { "Race" : "Protoss", "OpeningGroup" : "HongTu", "AggressiveScore":3000,  "Map":"FSGS", 
+        "OpeningBuildOrder" :
+				  ["go defensive on at0","Probe","Probe","Pylon on bp1","Probe","Probe","Forge on bf1","Probe","go defensive on bg2","Nexus on bn1","Probe","Photon Cannon on bc1","Gateway on bg1","Photon Cannon on bc2","Assimilator","Pylon on bp2","go scout my location","Probe","go scout location","Zealot","Cybernetics Core on by1","Probe","Assimilator","Assimilator","Assimilator","Stargate","Fleet Beacon","2 x Stargate","Assimilator","Assimilator","2 x Stargate","60 x Carrier"]
+      },
+      "FSGS_Drop"			: { "Race" : "Protoss", "OpeningGroup" : "HongTu", "AggressiveScore":3000,  "Map":"FSGS", 
+        "OpeningBuildOrder" :
+				  ["go defensive on bn1","Probe","Probe","Pylon on bp1","Probe","Probe","Forge on bf1","Probe","go defensive on bg2","Nexus on bn1","Probe","Photon Cannon on bc1","Gateway on bg1","Photon Cannon on bc2","Assimilator","Pylon on bp2","Gateway on bg2","go scout my location","Probe","go scout location","Zealot","Cybernetics Core on by1","Probe","Zealot","Probe","Pylon on bp3","Zealot","Gateway on bg3","Citadel of Adun on vc1","Assimilator","2 x Zealot","Probe","2 x Zealot","Pylon on bp4","Gateway on bg4","Pylon on bp5","Templar Archives on vt1","Robotics Facility on vr1","2 x Zealot","2 x Dragoon","Pylon on bp6","Pylon on bp7","Pylon on bp8","3 x Zealot","Assimilator","Gateway on bg5","Gateway on bg6","Pylon on bp9","Pylon on bp10","Dark Templar","High Templar","Photon Cannon on bc3","Shuttle","Dark Templar","Leg Enhancements","High Templar","set squad name 2 x High Templar to vr1","set squad name 2 x Zealot to vr1","Photon Cannon on bc4","Photon Cannon on bc5","Pylon on bp11","Gateway on bg7","Gateway on bg8","4 x Zealot","2 x Dragoon","Observatory on vo1","Gateway on bg9","Gateway on bg10","Pylon on bp12","Pylon on bp13","6 x Zealot","Shuttle","High Templar","Dark Templar","Singularity Charge","Observer","Pylon on bp14","Pylon on bp15","Robotics Support Bay on vb1","Assimilator","Gateway on bg11","Gateway on bg12","5 x Zealot","Pylon on bp16","Pylon on bp17","Forge on bf2","5 x Zealot","Pylon on bp18","Pylon on bp19","Pylon on bp20","Gateway on bg13","Gateway on bg14","5 x Zealot","3 x Dragoon","Pylon on bp21","Pylon on bp22","Forge on bf3","5 x Zealot","3 x Dragoon","Robotics Facility on vr2","Assimilator","Assimilator","Photon Cannon on bc6","Photon Cannon on bc7","Photon Cannon on bc8","Photon Cannon on bc9","Gravitic Drive","3 x Zealot","3 x Dragoon","Gateway on bg15","Gateway on bg16","Gateway on bg17","Photon Cannon on bc10","Photon Cannon on bc11","Photon Cannon on bc12","Photon Cannon on bc13","Photon Cannon on bc14","Nexus on bn2","Robotics Facility on vr3","3 x Zealot","5 x Dragoon","Photon Cannon on bc15","Photon Cannon on bc16","Photon Cannon on bc17","Photon Cannon on bc18","Gateway on bg18","Gateway on bg19","Gateway on bg20","Robotics Facility on vr4","4 x Zealot","5 x Dragoon","Photon Cannon on bc19","Photon Cannon on bc20","Photon Cannon on bc21","Photon Cannon on bc22","3 x Zealot","5 x Dragoon","10 x Zealot","Stargate on vs1","Gateway on bg21","Gateway on bg22","Gateway on bg23","Gateway on bg24","Gateway on bg25","Gateway on bg26","Gateway on bg27","Gateway on bg28","Gateway on bg29","Gateway on bg30","Photon Cannon on bc23","Photon Cannon on bc24","Photon Cannon on bc25","Photon Cannon on bc26","Photon Cannon on bc27","Photon Cannon on bc28","Photon Cannon on bc29","Photon Cannon on bc30","Stargate on vs1", "Fleet Beacon on vf1", "Cybernetics Core on by2"]
+      },
+      "FSGS_2BN"			: { "Race" : "Protoss", "OpeningGroup" : "HongTu", "AggressiveScore":3000,  "Map":"FSGS", 
+        "OpeningBuildOrder" :
+				  ["go defensive on bn1","Pylon on bp1","Nexus on bn1","Forge on bf1","Probe","Gateway on bg1","Pylon on bp2","go scout location","Probe","Photon Cannon on bc1","Photon Cannon on bc2","Zealot","Gateway on bg2","Probe","Pylon on bp3","Probe","Zealot","Gateway on bg3","Assimilator","go scout my location","Probe","2 x Zealot","2 x Zealot","Cybernetics Core on by1","Pylon on bp4","Probe","2 x Zealot","Probe","Gateway on bg4","Assimilator","Probe","Pylon on bp5","2 x Zealot","Pylon on bp6","Gateway on bg5","go defensive on bg2","Probe","Pylon on bp7","Probe","2 x Zealot","go aggressive","Probe","Pylon on bp8","2 x Zealot","Citadel of Adun on vc1","2 x Zealot","Probe","2 x Zealot","Gateway on bg6","Gateway on bg7","Assimilator","2 x Zealot","Pylon on bp9","Pylon on bp10","Photon Cannon on bc3","2 x Zealot","Leg Enhancements","Templar Archives on vt1","Probe","2 x Zealot","Robotics Facility on vr1","Photon Cannon on bc4","Photon Cannon on bc5","Gateway on bg8","Gateway on bg9","Nexus on bn2","2 x Zealot","Assimilator","2 x Zealot","Probe","Dark Templar","High Templar","Assimilator","Shuttle","Observatory on vo1","Pylon on bp11","6 x Zealot","set squad name 2 x Zealot to bf1","Dark Templar","Pylon on bp12","Pylon on bp13","5 x Zealot","Pylon on bp14","Pylon on bp15","10 x Zealot","Gateway on bg10","Gateway on bg11","Pylon on bp16","Pylon on bp17","High Templar","4 x Dragoon","Robotics Support Bay on vb1","Pylon on bp18","Pylon on bp19","5 x Zealot","set squad name 4 x Dragoon to bf1","3 x Dragoon","Gateway on bg12","Forge on bf2","Pylon on bp20","Pylon on bp21","Pylon on bp22","Gateway on bg13","Gateway on bg14","5 x Dragoon","10 x Zealot","Singularity Charge","Observer","Forge on bf3","Observer","Robotics Facility on vr2","Photon Cannon on bc6","Photon Cannon on bc7","Photon Cannon on bc8","Photon Cannon on bc9","Photon Cannon on bc10","Photon Cannon on bc11","Photon Cannon on bc12","Photon Cannon on bc13","Photon Cannon on bc14","Assimilator","Gateway on bg15","Gateway on bg16","Gateway on bg17","Gateway on bg18","Gateway on bg19","Gateway on bg20","Robotics Facility on vr3","Photon Cannon on bc15","Photon Cannon on bc16","Photon Cannon on bc17","Photon Cannon on bc18","Stargate on vs1","Robotics Facility on vr4","3 x Zealot","3 x Dragoon","3 x Zealot","3 x Dragoon","Gateway on bg21","Gateway on bg22","Gateway on bg23","Gateway on bg24","Gateway on bg25","Photon Cannon on bc19","Photon Cannon on bc20","Photon Cannon on bc21","Photon Cannon on bc22","Gateway on bg26","Gateway on bg27","Gateway on bg28","Gateway on bg29","Gateway on bg30","5 x Zealot","5 x Dragoon","5 x Zealot","5 x Dragoon","Arbiter Tribunal on va1","Photon Cannon on bc23","Photon Cannon on bc24","Photon Cannon on bc25","5 x Zealot","5 x Dragoon","5 x Zealot","5 x Dragoon","3 x Arbiter","Reaver Capacity","Scarab Damage","Photon Cannon on bc26","Photon Cannon on bc27","Photon Cannon on bc28","Photon Cannon on bc29","Photon Cannon on bc30"]
+      },
+      "FSGS_LongQi"			: { "Race" : "Protoss", "OpeningGroup" : "HongTu", "AggressiveScore":3000,  "Map":"FSGS", 
+        "OpeningBuildOrder" :
+				  ["go defensive on bn1","Probe","Probe","Pylon on bp1","Probe","Gateway on bg1","go scout location","Gateway on bg2","Pylon on bp2","Assimilator","Probe","Probe","Pylon on bp3","Zealot","Zealot","Cybernetics Core on by1","Gateway on bg3","Assimilator","Probe","2 x Zealot","1 x Zealot","Pylon on bp4","Probe","2 x Dragoon","Singularity Charge","3 x Dragoon","Probe","Gateway on bg4","Probe","Forge on bf1","Pylon on bp5","3 x Dragoon","Pylon on bp6","go defensive on bg2","Gateway on bg5","go aggressive","Probe","Pylon on bp7","Photon Cannon on bc1","Photon Cannon on bc2","Probe","3 x Dragoon","Nexus on bn1","Probe","Pylon on bp8","3 x Dragoon","Citadel of Adun on vc1","2 x Zealot","Probe","3 x Dragoon","Gateway on bg6","Gateway on bg7","Assimilator","3 x Dragoon","Pylon on bp9","Pylon on bp10","Photon Cannon on bc3","3 x Dragoon","Leg Enhancements","Templar Archives on vt1","Probe","2 x Zealot","Robotics Facility on vr1","Photon Cannon on bc4","Photon Cannon on bc5","Gateway on bg8","Gateway on bg9","Nexus on bn2","2 x Zealot","Assimilator","2 x Zealot","Probe","Dark Templar","High Templar","Assimilator","Shuttle","Observatory on vo1","Pylon on bp11","6 x Zealot","set squad name 2 x Zealot to bf1","Dark Templar","Pylon on bp12","Pylon on bp13","5 x Zealot","Pylon on bp14","Pylon on bp15","10 x Zealot","Gateway on bg10","Gateway on bg11","Pylon on bp16","Pylon on bp17","High Templar","4 x Dragoon","Robotics Support Bay on vb1","Pylon on bp18","Pylon on bp19","5 x Zealot","set squad name 4 x Dragoon to bf1","3 x Dragoon","Gateway on bg12","Forge on bf2","Pylon on bp20","Pylon on bp21","Pylon on bp22","Gateway on bg13","Gateway on bg14","5 x Dragoon","10 x Zealot","Observer","Forge on bf3","Observer","Robotics Facility on vr2","Photon Cannon on bc6","Photon Cannon on bc7","Photon Cannon on bc8","Photon Cannon on bc9","Photon Cannon on bc10","Photon Cannon on bc11","Photon Cannon on bc12","Photon Cannon on bc13","Photon Cannon on bc14","Assimilator","Gateway on bg15","Gateway on bg16","Gateway on bg17","Gateway on bg18","Gateway on bg19","Gateway on bg20","Robotics Facility on vr3","Photon Cannon on bc15","Photon Cannon on bc16","Photon Cannon on bc17","Photon Cannon on bc18","Stargate on vs1","Robotics Facility on vr4","3 x Zealot","3 x Dragoon","3 x Zealot","3 x Dragoon","Gateway on bg21","Gateway on bg22","Gateway on bg23","Gateway on bg24","Gateway on bg25","Photon Cannon on bc19","Photon Cannon on bc20","Photon Cannon on bc21","Photon Cannon on bc22","Gateway on bg26","Gateway on bg27","Gateway on bg28","Gateway on bg29","Gateway on bg30","5 x Zealot","5 x Dragoon","5 x Zealot","5 x Dragoon","Arbiter Tribunal on va1","Photon Cannon on bc23","Photon Cannon on bc24","Photon Cannon on bc25","5 x Zealot","5 x Dragoon","5 x Zealot","5 x Dragoon","3 x Arbiter","Reaver Capacity","Scarab Damage","Photon Cannon on bc26","Photon Cannon on bc27","Photon Cannon on bc28","Photon Cannon on bc29","Photon Cannon on bc30","Stargate on vs1","Fleet Beacon on vf1","Cybernetics Core on by2"]
+      },
+	   "FSGS_wn_xx"			: { "Race" : "Protoss", "OpeningGroup" : "HongTu", "AggressiveScore":3000,  "Map":"FSGS", 
+        "OpeningBuildOrder" :
+				["go defensive on bn1","Probe","Probe","Pylon on bp1","Gateway on bg1","Forge on bf1","go scout location","Pylon on bp2","Gateway on bg2","Photon Cannon on bc1","Probe","Zealot","Gateway on bg3","Probe","Zealot","Pylon on bp3","go scout my location","Probe","Zealot","Gateway on bg4","Probe","Zealot","Assimilator","go aggressive","Probe","Zealot","Gateway on bg5","Probe","Zealot","Probe","Zealot","go scout location","go defensive on bg2","Nexus on bn1","Probe","Zealot","Assimilator","Pylon on bp4","Probe","Zealot","Cybernetics Core on by1","Probe","Zealot","3 x Zealot","Pylon on bp4","Pylon on bp5","go scout location","Probe","Zealot","3 x Zealot","Probe","Zealot","go aggressive","Photon Cannon on bfc3","Photon Cannon on bc3","Probe","Zealot","Probe","Zealot","go aggressive","2 x Zealot","Citadel of Adun on vc1","Pylon on bp6","Pylon on at0","Probe","Zealot","Pylon on bp7","Probe","Zealot","Pylon on bp8","Probe","Zealot","Pylon on bp9","Probe","Zealot","Pylon on bp10","Probe","Zealot","Pylon on bp11","Probe","Zealot","Leg Enhancements","Templar Archives on vt1","Probe","Zealot","Robotics Facility on vr1","Probe","Zealot","Gateway on bg7","Gateway on bg8","Stargate on bg9","go defensive on at0","Probe","Zealot","Photon Cannon on bc2","Probe","Zealot","Photon Cannon on at0_1","Probe","Zealot","Photon Cannon on at0_2","Pylon on bp12","Pylon on bp13","Probe","Zealot","Assimilator","Probe","Zealot","Assimilator","Probe","Zealot","Assimilator","Probe","Zealot","Photon Cannon on bc4","Probe","Zealot","Photon Cannon on bc5","Dark Templar","Dark Templar","High Templar","set squad name 4 x High Templar to bf1","set squad name 2 x Zealot to vr1","Stargate on bg6","Dark Templar","High Templar","Shuttle","Probe","Zealot","Dragoon","Dragoon","Dragoon","Dragoon","Corsair","Nexus on bn2","Photon Cannon on at0_4","Robotics Support Bay on vb1","Probe","Zealot","Photon Cannon on at0_5","Corsair","Probe","Zealot","set squad name 4 x Corsair to bf1","High Templar","Dark Templar","Corsair","Pylon on bp14","Pylon on bp15","Pylon on bp16","Pylon on bp17","Corsair","Forge on bf2","Pylon on bp18","Pylon on bp19","Pylon on bp20","Corsair","Pylon on bp21","Pylon on bp22","Singularity Charge","set recon 1 x Zealot","Gateway on bg10","Gateway on bg11","Gateway on bg12","Observatory on vo1","2 x Zealot","Forge on bf3","Robotics Facility on vr2","Corsair","Robotics Facility on vr3","Corsair","Observer","Robotics Facility on vr4","Corsair","Photon Cannon on bc6","Photon Cannon on bc7","Reaver","Photon Cannon on bc8","Photon Cannon on bc9","Reaver","Photon Cannon on bc10","Photon Cannon on bc11","Reaver","Photon Cannon on bc12","Photon Cannon on bc13","Reaver","Photon Cannon on bc14","Corsair","Stargate on bg13","Corsair","Corsair","Gateway on bg14","Assimilator","Corsair","set recon 1 x Shuttle","Gateway on bg15","Gateway on bg16","Gateway on bg17","3 x Zealot","3 x Dragoon","set recon 2 x Shuttle","Gateway on bg18","Gateway on bg19","Gateway on bg20","3 x Zealot","3 x Dragoon","Photon Cannon on bc15","Reaver","Photon Cannon on bc16","Reaver","Photon Cannon on bc17","Photon Cannon on bc18","Reaver","Photon Cannon on bc19","Photon Cannon on bc20","Reaver","Photon Cannon on bc21","Photon Cannon on bc22","2 x Zealot","5 x Dragoon","2 x Zealot","5 x Dragoon","Stargate on vs1","Stargate on bg21","Stargate on bg22","Gateway on bg23","Gateway on bg24","set recon 2 x Shuttle","Gateway on bg25","Gateway on bg26","Gateway on bg27","Gateway on bg28","Gateway on bg29","Gateway on bg30","Fleet Beacon","Arbiter Tribunal on va1","2 x Zealot","5 x Dragoon","2 x Zealot","5 x Dragoon","High Templar","High Templar","High Templar","Arbiter","2 x Zealot","Reaver Capacity","Scarab Damage","Arbiter","2 x Zealot","Corsair","2 x Zealot","2 x Zealot","2 x Zealot","2 x Zealot","Disruption Web","Stasis Field","Reaver","Arbiter","2 x Zealot","Corsair","2 x Zealot","2 x Zealot","2 x Zealot","2 x Zealot","Arbiter","Reaver","2 x Zealot","Corsair","2 x Zealot","2 x Zealot","2 x Zealot","2 x Zealot","Arbiter","Reaver","2 x Zealot","Corsair","2 x Zealot","2 x Zealot","2 x Zealot","2 x Zealot","Arbiter","Reaver","Scarab Damage"] 
+		 },
+     "FSGS_ts1gxx"			: { "Race" : "Protoss", "OpeningGroup" : "HongTu", "AggressiveScore":3000,  "Map":"FSGS", 
+        "OpeningBuildOrder" :
+				 ["go defensive on bn1","Pylon on bp1","Forge on bf1","Gateway on bg1","Assimilator","Photon Cannon on bc1","Pylon on bp2","Gateway on bg2","go scout location","Cybernetics Core on by1","Gateway on bg3","3 x Zealot","Pylon on bp3","Pylon on bp4","Pylon on bp5","go aggressive","Citadel of Adun on vc1","Assimilator","Zealot","Zealot","3 x Zealot","Zealot","Leg Enhancements","Photon Cannon on bc3","Zealot","Gateway on bg4","Zealot","Gateway on bg5","Photon Cannon on bc2","5 x Zealot","Pylon on bp6","Zealot","Pylon on bp7","Zealot","Pylon on bp8","Zealot","Pylon on bp9","Zealot","Pylon on bp10","Zealot","Pylon on bp11","Zealot","Templar Archives on vt1","Zealot","Robotics Facility on vr1","Zealot","Nexus on bn1","Assimilator","Assimilator","Assimilator","Photon Cannon on bc4","Photon Cannon on bc5","Dark Templar","Dark Templar","High Templar","set squad name 4 x High Templar to bf1","set squad name 2 x Zealot to vr1","Stargate on bg6","Dark Templar","High Templar","Shuttle","2 x Zealot","4 x Dragoon","Corsair","Nexus on bn2","Robotics Support Bay on vb1","Pylon on bp12","Pylon on bp13","Zealot","set squad name 4 x Corsair to bf1","High Templar","Dark Templar","Pylon on bp14","Pylon on bp15","Pylon on bp16","Pylon on bp17","Corsair","Forge on bf2","Pylon on bp18","Pylon on bp19","Pylon on bp20","Corsair","Pylon on bp21","Pylon on bp22","Singularity Charge","Gateway on bg7","Gateway on bg8","Gateway on bg9","Gateway on bg10","Gateway on bg11","Gateway on bg12","Observatory on vo1","5 x Zealot","Robotics Facility on vr2","Corsair","Robotics Facility on vr3","Observer","Robotics Facility on vr4","Photon Cannon on bc6","Photon Cannon on bc7","Reaver","Photon Cannon on bc8","Photon Cannon on bc9","Reaver","Photon Cannon on bc10","Photon Cannon on bc11","Reaver","Photon Cannon on bc12","Photon Cannon on bc13","Reaver","Photon Cannon on bc14","Corsair","Gateway on bg13","Gateway on bg14","Assimilator","Corsair","Gateway on bg15","Gateway on bg16","Gateway on bg17","3 x Dragoon","Gateway on bg18","Gateway on bg19","Gateway on bg20","3 x Dragoon","Photon Cannon on bc15","Reaver","Photon Cannon on bc16","Reaver","Photon Cannon on bc17","Photon Cannon on bc18","Reaver","Photon Cannon on bc19","Photon Cannon on bc20","Reaver","Photon Cannon on bc21","Photon Cannon on bc22","5 x Zealot","5 x Dragoon","Stargate on vs1","Stargate on bg21","Stargate on bg22","Gateway on bg23","Gateway on bg24","Gateway on bg25","Gateway on bg26","Gateway on bg27","Gateway on bg28","Gateway on bg29","Gateway on bg30","Fleet Beacon","5 x Dragoon","5 x Zealot","5 x Dragoon","High Templar","High Templar","High Templar","Arbiter","5 x Zealot","Reaver Capacity","Scarab Damage","5 x Zealot","Corsair","Disruption Web","Stasis Field","Reaver","Scarab Damage"]
+      }                       
+    }
+	}
+}
